@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
       - name: shinyproxy
-        image: shinyproxy-example
-        imagePullPolicy: Never
+        image: hackyacr.azurecr.io/shinyproxy-example:v1
+        #imagePullPolicy: Never
         ports:
         - containerPort: 8080
       - name: kube-proxy-sidecar
-        image: kube-proxy-sidecar
-        imagePullPolicy: Never
+        image: hackyacr.azurecr.io/kube-proxy-sidecar:v1
+        #imagePullPolicy: Never
         ports:
         - containerPort: 8001
